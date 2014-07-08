@@ -26,6 +26,7 @@ require([
 
 	// Add each test class here as they are implemented
 	require([
+		'spec/AccordionTest'
 	], function () {
 		if (window.mochaPhantomJS) {
 			window.mochaPhantomJS.run();
