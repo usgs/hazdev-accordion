@@ -1,4 +1,4 @@
-git require.config({
+require.config({
 	baseUrl: '.'
 });
 
@@ -10,7 +10,7 @@ require([
 	'use strict';
 
 	var accordion = new Accordion({
-		el: document.querySelector('.page-content'),
+		el: document.querySelector('.test-accordions'),
 		accordions: [
 			{
 				toggleText: 'Section Header (Dynamically Created)',
