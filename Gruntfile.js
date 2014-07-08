@@ -30,8 +30,14 @@ module.exports = function (grunt) {
 				tasks: ['concurrent:scripts']
 			},
 			scss: {
-				files: ['<%= app.src %>/**.scss'],
-				tasks: ['compass:dev']
+				files: [
+					'<%= app.src %>/**.scss',
+					'<%= app.test %>/**.scss'
+				],
+				tasks: [
+					'compass:dev',
+					'compass:test'
+				]
 			},
 			tests: {
 				files: ['<%= app.test %>/*.html', '<%= app.test %>/**.js'],
@@ -82,6 +88,13 @@ module.exports = function (grunt) {
 					cssDir: '<%= app.tmp %>',
 					environment: 'development'
 				}
+			},
+			test: {
+				options: {
+					sassDir: '<%= app.test %>',
+					cssDir: '<%= app.tmp %>',
+					environment: 'development'
+				}
 			}
 		},
 		mocha_phantomjs: {
@@ -108,6 +121,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('default', [
 		'connect:dev',
 		'compass:dev',
+		'compass:test',
 		'concurrent:scripts',
 		'mocha_phantomjs',
 		'watch'
