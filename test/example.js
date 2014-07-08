@@ -1,12 +1,9 @@
-require.config({
-	baseUrl: '.',
-	paths: {
-		theme: '/theme/js'
-	}
+git require.config({
+	baseUrl: '.'
 });
 
 require([
-	'theme/Accordion'
+	'Accordion'
 ], function (
 	Accordion
 ) {
