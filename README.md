@@ -5,7 +5,12 @@ An accordion toggle web application for collapsing and expanding information.
 
 h2. Getting Started
 
-TODO
+[Use git to clone hazdev-question-view from git repository](readme_git_install.md)
+
+[Install needed dependencies and run them](readme_dependency_install.md)
+
+To test the application locally, run grunt and browse to:
+  http://localhost:8000/example.html
 
 h2. License
 
