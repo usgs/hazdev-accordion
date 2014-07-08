@@ -2,7 +2,10 @@
 	"name": "hazdev-accordion",
 	"version": "0.0.0",
 	"homepage": "http://earthquake.usgs.gov/",
-	"repository": {"type":"git","url":"https://github.com/usgs/hazdev-accordion.git"},
+	"repository": {
+		"type":"git",
+		"url":"https://github.com/usgs/hazdev-accordion.git"
+	},
 	"description": "An accordion toggle web application for collapsing and expanding information.",
 	"author": {
 		"name": "",
@@ -31,7 +34,8 @@
 		"grunt-contrib-watch": "~0.4.4",
 		"grunt-mocha-phantomjs": "~0.2.8",
 		"matchdep": "~0.1.2",
-		"mocha": "~1.9.0"
+		"mocha": "~1.9.0",
+		"grunt-contrib-compass": "~0.7.0"
 	},
 	"engines": {
 		"node": ">=0.8.0"
