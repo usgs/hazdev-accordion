@@ -58,10 +58,6 @@ Readme dependencies
    `brew tap josegonzalez/php`
    `brew install php54`
 
-3. Use npm to install grunt and bower.
-   `npm install -g grunt-cli`
-   `npm install -g bower`
-
 4. Update paths as needed in your `~/.bash_profile`:
    `# brew installed binaries`
    `export PATH=$PATH:/usr/local/bin`
