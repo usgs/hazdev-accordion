@@ -115,7 +115,6 @@ module.exports = function (grunt) {
 		'compass:dev',
 		'compass:test',
 		'concurrent:scripts',
-		'mocha_phantomjs',
 		'watch'
 	]);
 };
