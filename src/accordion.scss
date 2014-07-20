@@ -9,7 +9,7 @@ $accordion-border-color:rgb(226,226,226) !default;
 
 .accordion {
 	display:block;
-	margin-bottom:15px;
+	margin:0;
 
 	> .accordion-toggle {
 		display:block;
@@ -18,10 +18,6 @@ $accordion-border-color:rgb(226,226,226) !default;
 		cursor:pointer;
 		margin:0;
 
-		&:hover {
-			text-decoration:none;
-		}
-
 		&:before {
 			@include icon('\25be');
 		}
@@ -29,7 +25,6 @@ $accordion-border-color:rgb(226,226,226) !default;
 }
 
 .accordion-closed {
-	margin:0;
 
 	> .accordion-toggle:before {
 		@include icon('\25b8');
