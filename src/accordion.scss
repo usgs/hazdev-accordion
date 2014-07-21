@@ -1,22 +1,25 @@
 $accordion-border-color:rgb(226,226,226) !default;
 
 @mixin icon ($icon) {
-		font-family:"Courier New", Courier, monospace;
-		content:$icon;
-		letter-spacing:1em;
-		font-weight:bold;
+	position:absolute;
+	left:0;
+	font-family:"Courier New", Courier, monospace;
+	content:$icon;
+	font-weight:bold;
 }
 
 .accordion {
+	position:relative;
 	display:block;
 	margin:0;
 
 	> .accordion-toggle {
 		display:block;
 		border-bottom:1px solid $accordion-border-color;
-		padding:15px 0;
+		padding:1em 0;
 		cursor:pointer;
 		margin:0;
+		padding-left:1.2em;
 
 		&:before {
 			@include icon('\25be');
