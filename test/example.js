@@ -39,7 +39,7 @@ require([
 			},
 			{
 				toggleText: 'Section Header 2 (Dynamically Created)',
-				toggleElement: 'span',
+				toggleElement: 'a',
 				contentText:
 					'<p>My awesome contents for this great accordion</p>',
 				classes: 'accordion-section example-style'

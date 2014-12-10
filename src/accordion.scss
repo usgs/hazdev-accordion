@@ -1,14 +1,7 @@
 $accordion-border-color:rgb(226,226,226) !default;
 
 @mixin icon ($icon) {
-	position:absolute;
-	right:1rem;
-	width:1rem; // allows easier control of icon
 	content:$icon;
-	top: 0.75rem;
-	line-height: 1.2;
-	text-align: center;
-	font-size: 1.5rem;
 }
 
 /* Base -- Base accordion styles */
@@ -22,17 +15,21 @@ $accordion-border-color:rgb(226,226,226) !default;
 
 	> .accordion-toggle {
 		display:block;
+		position:relative;
 		padding:1rem 2.5rem 1rem 1rem;
 		border-top:1px solid $accordion-border-color;
 		border-bottom:1px solid $accordion-border-color;
 		cursor:pointer;
 
 		&:before {
+			position:absolute;
+			right:1rem;
+			width:1rem; // allows easier control of icon
+			text-align: center;
 			@include icon('\25be');
 		}
 
 		&:hover {
-			background-color:rgba(0,0,0,0.02);
 			text-decoration:underline;
 		}
 	}
@@ -46,7 +43,7 @@ $accordion-border-color:rgb(226,226,226) !default;
 .accordion-closed {
 
 	> .accordion-toggle {
-		border-bottom:1px solid $accordion-border-color;
+		background-color:rgba(0,0,0,0.02);
 
 		&:before {
 			@include icon('\25b8');
@@ -66,7 +63,6 @@ $accordion-border-color:rgb(226,226,226) !default;
 	> .accordion {
 		> .accordion-toggle {
 			margin:0;
-			padding:1rem 2.5rem 1rem 1rem;
 			border-top:none;
 		}
 	}
@@ -75,8 +71,6 @@ $accordion-border-color:rgb(226,226,226) !default;
 /* Section -- Toggle content */
 .accordion-section {
 	margin:1rem 0;
-	//border:1px solid #ccc;
-	//padding:0 1rem;
 	border:none;
 
 	> .accordion-content {
@@ -85,21 +79,21 @@ $accordion-border-color:rgb(226,226,226) !default;
 	}
 
 	> .accordion-toggle {
-		position:absolute;
-		top:10px;
-		right:15px;
-		margin:0;
+		display: inline-block;
+		position: relative;
+		margin: 1em 0 0;
 		padding:0;
-		color:#00f;
-		cursor:pointer;
-		font-size:12px;
-		border:none;
+		border: none;
+		background:none;
 
 		&:before {
-			top:0;
-			left:-1rem;
-			font-size:0.8rem;
+			position: static;
+			display: inline-block;
+			font-size: 16px;
+			width: 1em;
+			text-align:left;
 		}
+
 		&:hover {
 			text-decoration:underline;
 			background:none;
