@@ -16,16 +16,18 @@ $accordion-border-color:rgb(226,226,226) !default;
 	> .accordion-toggle {
 		display:block;
 		position:relative;
-		padding:1rem 2.5rem 1rem 1rem;
+		padding: 0.6em 3.5rem 0.6em 1.5rem;
 		border-top:1px solid $accordion-border-color;
 		border-bottom:1px solid $accordion-border-color;
 		cursor:pointer;
+		background-color:rgba(0,0,0,0.02);
 
 		&:before {
 			position:absolute;
-			right:1rem;
-			width:1rem; // allows easier control of icon
+			right:1.5rem; // match with padding on .accordion-toggle
+			width:1em; // allows easier control of icon
 			text-align: center;
+			opacity: 0.5; // lighten the caret
 			@include icon('\25be');
 		}
 
@@ -35,7 +37,7 @@ $accordion-border-color:rgb(226,226,226) !default;
 	}
 
 	> .accordion-content {
-		padding:0 1rem;
+		padding:0 1em 1em;
 		border-bottom:1px solid $accordion-border-color;
 	}
 }
@@ -43,7 +45,6 @@ $accordion-border-color:rgb(226,226,226) !default;
 .accordion-closed {
 
 	> .accordion-toggle {
-		background-color:rgba(0,0,0,0.02);
 
 		&:before {
 			@include icon('\25b8');
