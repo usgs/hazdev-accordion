@@ -6,9 +6,13 @@ var jshint = {
   options: {
     jshintrc: '.jshintrc'
   },
-  gruntfile: ['Gruntfile.js'],
+  gruntfile: [
+    'Gruntfile.js',
+    'gruntconfig/**/*.js'
+  ],
   scripts: [config.src + '/**/*.js'],
-  tests: [config.test + '/**/*.js']
+  tests: [config.test + '/**/*.js'],
+  example: [config.example + '/**/*.js']
 };
 
 module.exports = jshint;
