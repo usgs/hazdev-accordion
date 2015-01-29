@@ -15,15 +15,15 @@ var browserify = {
 
 // bundles
 [
-  'index',
-  'AccordionTest',
+  'test/index',
+  'example/index',
+  'src/Accordion'
 ].forEach(function (bundle) {
-  var targetFile = config.build + '/' + config.test + '/' + bundle + '.js';
-  var sourceFile = config.test + '/' + bundle + '.js';
+  var targetFile = config.build + '/' + bundle + '.js';
+  var sourceFile = bundle + '.js';
 
   browserify[bundle] = {files: {}};
   browserify[bundle].files[targetFile] = [sourceFile];
 });
-
 
 module.exports = browserify;
