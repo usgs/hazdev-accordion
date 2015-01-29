@@ -1,37 +1,14 @@
-require.config({
-	baseUrl: '..',
-	paths: {
-		mocha: 'mocha/mocha',
-		chai: 'chai/chai'
-	},
-	shim: {
-		mocha: {
-			exports: 'mocha'
-		},
-		chai: {
-			deps: ['mocha'],
-			exports: 'chai'
-		}
-	}
-});
+/* global mocha */
+'use strict';
 
-require([
-	'mocha',
-], function (
-	mocha
-) {
-	'use strict';
+mocha.setup('bdd');
+mocha.reporter('html');
 
-	mocha.setup('bdd');
+// Add each test class here as they are implemented
+require('./spec/AccordionTest');
 
-	// Add each test class here as they are implemented
-	require([
-		'spec/AccordionTest'
-	], function () {
-		if (window.mochaPhantomJS) {
-			window.mochaPhantomJS.run();
-		} else {
-			mocha.run();
-		}
-	});
-});
+if (window.mochaPhantomJS) {
+	window.mochaPhantomJS.run();
+} else {
+	mocha.run();
+}
