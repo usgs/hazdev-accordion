@@ -8,7 +8,7 @@ mocha.reporter('html');
 require('./spec/AccordionTest');
 
 if (window.mochaPhantomJS) {
-	window.mochaPhantomJS.run();
+  window.mochaPhantomJS.run();
 } else {
-	mocha.run();
+  mocha.run();
 }
