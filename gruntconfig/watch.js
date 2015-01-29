@@ -4,7 +4,9 @@ var config = require('./config');
 
 var watch = {
   scripts: {
-    files: [config.src + '/**/*.js'],
+    files: [
+      config.src + '/**/*.js'
+    ],
     tasks: [
       'jshint:scripts',
       'browserify',
@@ -27,21 +29,28 @@ var watch = {
       config.src + '/**/*.scss',
       config.src + '/**/*.scss'
     ],
-    tasks: ['compass:dev', 'compass:test']
+    tasks: [
+      'compass:dev',
+      'compass:test'
+    ]
   },
   gruntfile: {
     files: [
       'Gruntfile.js',
       'gruntconfig/**/*.js'
     ],
-    tasks: ['jshint:gruntfile']
+    tasks: [
+      'jshint:gruntfile'
+    ]
   },
   example: {
     files: [
       config.example + '/*.html',
       config.example + '/**/*.js'
     ],
-    tasks: ['build']
+    tasks: [
+      'build'
+    ]
   }
 };
 
