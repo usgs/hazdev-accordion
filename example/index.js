@@ -1,6 +1,6 @@
 'use strict';
 
-var Accordion = require('Accordion');
+var Accordion = require('src/Accordion');
 
 new Accordion({
   el:document.querySelector('.accordion-set-1')
