@@ -16,7 +16,7 @@ var browserify = {
     dest: config.build + '/' + config.src + '/Accordion.js',
     options: {
       alias: [
-        './' + config.src + '/Accordion.js:src/Accordion'
+        './' + config.src + '/Accordion.js:Accordion'
       ]
     }
   },
@@ -28,7 +28,7 @@ var browserify = {
     src: config.example + '/index.js',
     dest: config.build + '/' + config.example + '/index.js',
     options: {
-      external: 'src/Accordion'
+      external: ['Accordion']
     }
   }
 };
