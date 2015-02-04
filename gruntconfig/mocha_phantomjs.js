@@ -7,7 +7,7 @@ var mocha_phantomjs = {
     options: {
       verbose: true,
       urls: [
-        'http://localhost:' + config.port + '/index.html'
+        'http://localhost:' + config.port + '/test.html'
       ]
     }
   }
