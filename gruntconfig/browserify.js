@@ -11,7 +11,7 @@ var browserify = {
       ]
     }
   },
-  'src/Accordion': {
+  source: {
     src: [],
     dest: config.build + '/' + config.src + '/Accordion.js',
     options: {
@@ -20,13 +20,13 @@ var browserify = {
       ]
     }
   },
-  'test/index': {
-    src: config.test + '/index.js',
-    dest: config.build + '/' + config.test + '/index.js'
+  test: {
+    src: config.test + '/test.js',
+    dest: config.build + '/' + config.test + '/test.js'
   },
-  'example/index': {
-    src: config.example + '/index.js',
-    dest: config.build + '/' + config.example + '/index.js',
+  example: {
+    src: config.example + '/example.js',
+    dest: config.build + '/' + config.example + '/example.js',
     options: {
       external: ['Accordion']
     }
