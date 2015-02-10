@@ -42,15 +42,6 @@ var watch = {
     tasks: [
       'jshint:gruntfile'
     ]
-  },
-  example: {
-    files: [
-      config.example + '/*.html',
-      config.example + '/**/*.js'
-    ],
-    tasks: [
-      'build'
-    ]
   }
 };
 

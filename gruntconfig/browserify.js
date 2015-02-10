@@ -23,13 +23,6 @@ var browserify = {
   test: {
     src: config.test + '/test.js',
     dest: config.build + '/' + config.test + '/test.js'
-  },
-  example: {
-    src: config.example + '/example.js',
-    dest: config.build + '/' + config.example + '/example.js',
-    options: {
-      external: ['Accordion']
-    }
   }
 };
 
