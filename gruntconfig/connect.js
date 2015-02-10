@@ -9,9 +9,11 @@ var connect = {
   dev: {
     options: {
       base: [
-        config.build + '/' + config.example,
+        config.example,
         config.build + '/' + config.src
       ],
+      livereload: true,
+      open: 'http://localhost:8000/example.html',
       port: 8000
     }
   },
@@ -22,6 +24,8 @@ var connect = {
         config.build + '/' + config.src,
         'node_modules'
       ],
+      livereload: true,
+      open: 'http://localhost:8001/test.html',
       port: 8001
     }
   },
@@ -31,6 +35,8 @@ var connect = {
       base: [
         config.dist
       ],
+      livereload: true,
+      open: 'http://localhost:8002/example.html',
       port: 8002
     }
   },
