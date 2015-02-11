@@ -46,53 +46,60 @@ var _onClick = function (evt) {
 };
 
 var Accordion = function (options) {
-  options = _extend({}, ACCORDION_OPTIONS, options);
-  this._options = options;
-  this._el = options.el || document.createElement('section');
+  var _this,
+      _initialize,
 
-  this._initialize();
-};
+      _el,
+      _options;
 
-Accordion.prototype._initialize = function () {
-  var options = this._options,
-      i,
-      len;
+  _this = Object.create({});
 
-  this._el.addEventListener('click', _onClick);
+  _initialize = function (options) {
+    var i,
+        len;
 
-  if (options.accordions) {
-    len = options.accordions.length;
-    for (i = 0; i < len; i++) {
-      this.addAccordion(options.accordions[i]);
+    _options = _extend({}, ACCORDION_OPTIONS, options);
+    _el = _options.el || document.createElement('section');
+    _el.addEventListener('click', _onClick);
+
+    if (options.accordions) {
+      len = options.accordions.length;
+      for (i = 0; i < len; i++) {
+        _this.addAccordion(options.accordions[i]);
+      }
     }
-  }
-};
+  };
 
-/*
- * this will build the markup for an accordion element
- */
-Accordion.prototype.addAccordion = function(options) {
-  var accordion,
-      title,
-      content;
+  /*
+   * this will build the markup for an accordion element
+   */
+  _this.addAccordion = function(options) {
+    var accordion,
+        title,
+        content;
 
-  options = _extend({}, ADD_ACCORDION_OPTIONS, options);
+    options = _extend({}, ADD_ACCORDION_OPTIONS, options);
 
-  accordion = document.createElement('section');
-  accordion.className = 'accordion ' + options.classes;
+    accordion = document.createElement('section');
+    accordion.className = 'accordion ' + options.classes;
 
-  title = document.createElement(options.toggleElement);
-  title.className = ACCORDION_TOGGLE;
-  title.innerHTML = options.toggleText;
-  accordion.appendChild(title);
+    title = document.createElement(options.toggleElement);
+    title.className = ACCORDION_TOGGLE;
+    title.innerHTML = options.toggleText;
+    accordion.appendChild(title);
 
-  content = document.createElement('div');
-  content.className = ACCORDION_CONTENT;
-  content.innerHTML = options.contentText;
-  accordion.appendChild(content);
+    content = document.createElement('div');
+    content.className = ACCORDION_CONTENT;
+    content.innerHTML = options.contentText;
+    accordion.appendChild(content);
 
-  this._el.appendChild(accordion);
+    _el.appendChild(accordion);
+  };
+
+  _initialize(options);
+  options = null;
+  return _this;
+
 };
 
 module.exports = Accordion;
-
