@@ -2,7 +2,7 @@
 'use strict';
 
 var expect = chai.expect;
-var Accordion = require('Accordion');
+var Accordion = require('accordion/Accordion');
 
 var emptyAccordion = new Accordion({
   el: document.querySelector('.page-content'),
@@ -51,9 +51,6 @@ describe('Accordion test suite', function () {
       expect(emptyAccordion.content).to.not.be.null;
       /* jshint +W030 */
     });
-
   });
-
 });
-
 
