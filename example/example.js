@@ -2,19 +2,19 @@
 
 var Accordion = require('accordion/Accordion');
 
-new Accordion({
+Accordion({
   el:document.querySelector('.accordion-set-1')
 });
 
-new Accordion({
+Accordion({
   el:document.querySelector('.accordion-set-2')
 });
 
-new Accordion({
+Accordion({
   el:document.querySelector('.accordion-set-3')
 });
 
-var accordion = new Accordion({
+var accordion = Accordion({
   el: document.querySelector('.test-accordions'),
   accordions: [
     {
