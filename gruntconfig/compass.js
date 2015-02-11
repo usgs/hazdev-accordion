@@ -6,6 +6,7 @@ var compass = {
   dev: {
     options: {
       sassDir: config.src,
+      specify: config.src + 'hazdev-accordion.scss',
       cssDir: config.build + '/src',
       environment: 'development'
     }
