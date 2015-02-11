@@ -33,7 +33,8 @@ var connect = {
     options: {
       keepalive: true,
       base: [
-        config.dist
+        config.dist,
+        config.example
       ],
       livereload: true,
       open: 'http://localhost:8002/example.html',
