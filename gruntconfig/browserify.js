@@ -17,7 +17,7 @@ var browserify = {
   },
   source: {
     src: [],
-    dest: config.build + '/' + config.src + '/Accordion.js',
+    dest: config.build + '/' + config.src + '/hazdev-accordion.js',
     options: {
       alias: EXPORTS.map(function (path) {
         return './' + config.src + '/' + path + '.js:' + path;
