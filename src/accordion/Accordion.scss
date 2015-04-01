@@ -24,9 +24,9 @@ $accordion-border-color:rgb(226,226,226) !default;
 
     &:before {
       position:absolute;
-      left: 1rem;
+      left: 0;
       top: .5em;
-      width:1em; // allows easier control of icon
+      width:2em; // allows easier control of icon
       text-align: center;
       opacity: 0.5; // lighten the caret
       font-family: monospace;
