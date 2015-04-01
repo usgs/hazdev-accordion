@@ -16,7 +16,7 @@ $accordion-border-color:rgb(226,226,226) !default;
   > .accordion-toggle {
     display:block;
     position:relative;
-    padding: 0.6em 3.5rem 0.6em 1.5rem;
+    padding:.6em 1.5rem .6em 2em;
     border-top:1px solid $accordion-border-color;
     border-bottom:1px solid $accordion-border-color;
     cursor:pointer;
@@ -24,11 +24,13 @@ $accordion-border-color:rgb(226,226,226) !default;
 
     &:before {
       position:absolute;
-      right:1.5rem; // match with padding on .accordion-toggle
-      width:1em; // allows easier control of icon
+      left: 0;
+      top: .5em;
+      width:2em; // allows easier control of icon
       text-align: center;
       opacity: 0.5; // lighten the caret
-      @include icon('\25be');
+      font-family: monospace;
+      @include icon('-');
     }
 
     &:hover {
@@ -47,7 +49,7 @@ $accordion-border-color:rgb(226,226,226) !default;
   > .accordion-toggle {
 
     &:before {
-      @include icon('\25b8');
+      @include icon('+');
     }
   }
 
