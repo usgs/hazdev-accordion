@@ -16,19 +16,21 @@ $accordion-border-color:rgb(226,226,226) !default;
   > .accordion-toggle {
     display:block;
     position:relative;
-    padding: 0.6em 3.5rem 0.6em 1.5rem;
+    padding:.6em 1.5rem;
     border-top:1px solid $accordion-border-color;
     border-bottom:1px solid $accordion-border-color;
     cursor:pointer;
     background-color:rgba(0,0,0,0.02);
+    line-height: 1.0;
 
     &:before {
-      position:absolute;
-      right:1.5rem; // match with padding on .accordion-toggle
+      display: inline-block;
       width:1em; // allows easier control of icon
       text-align: center;
       opacity: 0.5; // lighten the caret
-      @include icon('\25be');
+      margin-right: .5em;
+      font-family: monospace;
+      @include icon('-');
     }
 
     &:hover {
@@ -47,7 +49,7 @@ $accordion-border-color:rgb(226,226,226) !default;
   > .accordion-toggle {
 
     &:before {
-      @include icon('\25b8');
+      @include icon('+');
     }
   }
 
