@@ -63,7 +63,8 @@ var Accordion = function (options) {
 
 
   _this = {
-    addAccordion: null
+    addAccordion: null,
+    destroy: null
   };
 
   _initialize = function (options) {
@@ -119,6 +120,15 @@ var Accordion = function (options) {
     accordion.appendChild(content);
 
     _el.appendChild(accordion);
+  };
+
+  _this.destroy = function () {
+    _el.removeEventListener('click', _onClick);
+
+    _el = null;
+    _options = null;
+
+    _this = null;
   };
 
 
