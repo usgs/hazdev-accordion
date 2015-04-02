@@ -15,7 +15,7 @@ _ACCORDION_OPTIONS = {
 _ADD_ACCORDION_OPTIONS = {
   toggleText: 'Details',
   toggleElement: 'span',
-  contentText: 'Contents',
+  content: 'Contents',
   classes: 'accordion-standard'
 };
 
@@ -103,7 +103,19 @@ var Accordion = function (options) {
 
     content = document.createElement('div');
     content.className = _ACCORDION_CONTENT;
-    content.innerHTML = options.contentText;
+
+    // Support legacy "contentText" if still present, but prefert "content"
+    if (options.contentText) {
+      content.innerHTML = options.contentText;
+    } else {
+      // Check if string content or DOM content
+      if (typeof options.content === 'string') {
+        content.innerHTML = options.content;
+      } else {
+        content.appendChild(options.content);
+      }
+    }
+
     accordion.appendChild(content);
 
     _el.appendChild(accordion);
