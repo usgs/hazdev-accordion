@@ -1,36 +1,31 @@
-$accordion-border-color:rgb(226,226,226) !default;
+$accordion-border-color:rgba(0,0,0,0.1) !default;
 
 @mixin icon ($icon) {
-  content:$icon;
+  content: $icon;
 }
 
 /* Base -- Base accordion styles */
 .accordion {
-  position:relative;
-  display:block;
-  margin:0;
-  padding:0;
-  border-left:1px solid $accordion-border-color;
-  border-right:1px solid $accordion-border-color;
+  display: flex;
+  flex-direction: column;
 
   > .accordion-toggle {
-    display:block;
-    position:relative;
-    padding:.6em 1.5rem .6em 2em;
-    border-top:1px solid $accordion-border-color;
-    border-bottom:1px solid $accordion-border-color;
+    background-color:rgba(0,0,0,0.05);
+    border:1px solid $accordion-border-color;
     cursor:pointer;
-    background-color:rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 16px;
 
     &:before {
-      position:absolute;
-      left: 0;
-      top: .5em;
-      width:2em; // allows easier control of icon
       text-align: center;
-      opacity: 0.5; // lighten the caret
-      font-family: monospace;
-      @include icon('-');
+      //opacity: 0.75;
+      //font-family: monospace;
+      flex: none;
+      align-self: center;
+      padding-right: 16px;
+      @include icon('\2212'); // minus sign
     }
 
     &:hover {
@@ -41,6 +36,9 @@ $accordion-border-color:rgb(226,226,226) !default;
   > .accordion-content {
     padding:0 1em 1em;
     border-bottom:1px solid $accordion-border-color;
+    border-left:1px solid $accordion-border-color;
+    border-right:1px solid $accordion-border-color;
+    flex: 1;
   }
 }
 
@@ -49,7 +47,7 @@ $accordion-border-color:rgb(226,226,226) !default;
   > .accordion-toggle {
 
     &:before {
-      @include icon('+');
+      @include icon('\002B'); // plus sign
     }
   }
 
@@ -60,7 +58,7 @@ $accordion-border-color:rgb(226,226,226) !default;
 
 /* Group -- Remove margin between accordion elements */
 .accordion-group {
-  margin:1rem 0;
+  margin:1em 0;
   border-top:1px solid $accordion-border-color;
 
   > .accordion {
@@ -73,7 +71,7 @@ $accordion-border-color:rgb(226,226,226) !default;
 
 /* Section -- Toggle content */
 .accordion-section {
-  margin:1rem 0;
+  margin:1em 0;
   border:none;
 
   > .accordion-content {
@@ -95,6 +93,7 @@ $accordion-border-color:rgb(226,226,226) !default;
       font-size: 16px;
       width: 1em;
       text-align:left;
+      padding: 0;
     }
 
     &:hover {
