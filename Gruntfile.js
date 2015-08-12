@@ -11,6 +11,7 @@ module.exports = function (grunt) {
     'clean',
     'browserify',
     'compass',
+    'postcss',
     'copy',
     'jshint'
   ]);
@@ -25,7 +26,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('dist', [
     'build',
-    'cssmin',
     'uglify',
     'connect:dist'
   ]);

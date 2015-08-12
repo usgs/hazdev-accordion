@@ -6,11 +6,11 @@ var config = {
   compass: require('./compass'),
   connect: require('./connect'),
   copy: require('./copy'),
-  cssmin: require('./cssmin'),
   jshint: require('./jshint'),
   mocha_phantomjs: require('./mocha_phantomjs'),
   uglify: require('./uglify'),
   watch: require('./watch'),
+  postcss: require('./postcss'),
 
   tasks: [
     'grunt-browserify',
@@ -18,11 +18,11 @@ var config = {
     'grunt-contrib-compass',
     'grunt-contrib-connect',
     'grunt-contrib-copy',
-    'grunt-contrib-cssmin',
     'grunt-contrib-jshint',
     'grunt-mocha-phantomjs',
     'grunt-contrib-uglify',
-    'grunt-contrib-watch'
+    'grunt-contrib-watch',
+    'grunt-postcss'
   ]
 };
 

@@ -1,22 +1,16 @@
 /* Styles for accordion-example only */
 
-.example-style {
-	border:1px solid #e5e5e5;
-	background-color:#fcfcfc;
-	padding:0 1rem;
-	min-height:3rem;
-}
-
 html {
   font-size:10px;
 }
 
 body {
   font-size:1.6rem;
+  margin: 16px;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.5;
   margin:16px 0 0;
 }
 
@@ -24,6 +18,3 @@ h1, h2, h3, h4, h5 {
   margin: 24px 0 0;
 }
 
-.accordion {
-  color:#444;
-}
