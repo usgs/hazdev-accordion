@@ -1,6 +1,6 @@
-$accordion-border-color:rgba(0,0,0,0.1) !default;
+$accordion-border-color:rgba(0,0,0,0.1);
 
-@mixin icon ($icon) {
+@define-mixin icon $icon {
   content: $icon;
 }
 
@@ -25,7 +25,7 @@ $accordion-border-color:rgba(0,0,0,0.1) !default;
       flex: none;
       align-self: center;
       padding-right: 16px;
-      @include icon('\2212'); // minus sign
+      @mixin icon '\2212';
     }
 
     &:hover {
@@ -47,7 +47,7 @@ $accordion-border-color:rgba(0,0,0,0.1) !default;
   > .accordion-toggle {
 
     &:before {
-      @include icon('\002B'); // plus sign
+      @mixin icon '\002B';
     }
   }
 

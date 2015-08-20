@@ -1,7 +1,8 @@
 'use strict';
 
 var autoprefixer = require('autoprefixer-core'),
-    cssnano = require('cssnano');
+    cssnano = require('cssnano'),
+    precss = require('precss');
 
 var config = require('./config');
 
@@ -9,11 +10,13 @@ var postcss = {
 
   build: {
     options: {
+      map: true, // sourcemaps
       processors: [
-        autoprefixer({'browsers': 'last 2 versions'}), // vendor prefix as needed
+        precss(), // postcss-mixins, postcss-nested, postcss-simple-vars
+        autoprefixer({'browsers': 'last 2 versions'}) // vendor prefix as needed
       ]
     },
-    src: config.build + '/' + config.src + '/hazdev-accordion.css',
+    src: config.src + '/hazdev-accordion.scss',
     dest: config.build + '/' + config.src + '/hazdev-accordion.css'
   },
 

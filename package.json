@@ -38,7 +38,9 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-mocha-phantomjs": "^0.6.0",
     "grunt-postcss": "^0.5.5",
-    "mocha": "^2.1.0"
+    "mocha": "^2.1.0",
+    "postcss-import": "^6.2.0",
+    "precss": "^0.3.0"
   },
   "engines": {
     "node": ">=0.8.0"

@@ -10,7 +10,6 @@ module.exports = function (grunt) {
   grunt.registerTask('build', [
     'clean',
     'browserify',
-    'compass',
     'postcss',
     'copy',
     'jshint'
