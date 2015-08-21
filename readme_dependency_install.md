@@ -34,7 +34,3 @@ Make sure you are in your `hazdev-accordion` project directory.
 2. Install local npm modules
 
         npm install
-
----
-Once dependencies are installed, you need to
-[configure the project](README.md#configure).

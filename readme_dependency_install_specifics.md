@@ -31,7 +31,7 @@ Readme install dependency details
         export PATH=$PATH:/usr/local/opt/ruby/bin
 
 6. Close and re-open your terminal so that your new PATH is loaded.
-   Make sure to navigate back to your `earthquake-eventadmin` project directory.
+   Make sure to navigate back to your `hazdev-accordion` project directory.
 
 Then continue by
 [installing secondary dependencies](readme_dependency_install.md#secondary-dependencies).
@@ -75,7 +75,7 @@ Then continue by
         npm install -g php
 
 6. Close and re-open your terminal so that your new PATH is loaded.
-   Make sure to navigate back to your `earthquake-eventadmin` project directory.
+   Make sure to navigate back to your `hazdev-accordion` project directory.
 
         git config --global url."https://".insteadOf git://
 
