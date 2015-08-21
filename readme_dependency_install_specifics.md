@@ -1,70 +1,83 @@
-Readme dependencies
-
----
-### Windows ###
-
-1. You will need a terminal tool for Windows. I used [Git Bash][] to test these
-   steps, but [Cygwin][] or another unix like editor should work fine too.
-  1. Download [Git Bash][].
-  2. Click **Next** on the welcome screen.
-  3. Click **Next** to acknowledge the license.
-  4. Click **Next** to keep the default directory.
-  5. Click **Next** to Select Components.
-     You may add Quick Launch and Desktop icons here if you'd like.
-  6. Click **Next** to confirm the Start Menu Folder.
-  7. PATH environment. I recommend the __last option__ here to include Unix
-     tools, but if you don't understand what that entails use the
-     _second option_ which still adds Git to your system PATH then click **Next**.
-  8. Line Ending Conversion. Keep the first option selected, click **Next**.
-  9. Click **Finish** when the installation is complete.
-
-1. Install the newest release of [Node][] for Windows, using the Windows
-   Installer (.msi).
-  1. Click **Next** on the welcome screen.
-  1. Accept the License Agreement, then click **Next**.
-  1. Click **Next** to keep the default directory.
-  1. Click **Next** to intall the default features of Node.
-  1. Click **Install** to begin the installation.
-  1. Click **Finish** when the installation is complete.
-
-1. Install the newest release of [Ruby][] for Windows, using the executable.
-  1. Select your language of choice, then click **OK**.
-  1. Accept the License Agreement, then click **Next**.
-  1. Select the check box to Add Ruby to your PATH then click **Install**.
-  1. Click **Finish** when the installation is complete.
-
-1. Close and re-open your terminal so that your new PATH is loaded.
-   Make sure to navigate back to your `hazdev-accordion` project directory.
-   `git config --global url."https://".insteadOf git://`
-
-[Git Bash]: http://git-scm.com/download/win
-[Cygwin]: http://cygwin.com/install.html
-[Node]: http://nodejs.org/download/
-[Ruby]: http://rubyinstaller.org/
+Readme install dependency details
 
 ---
 ### Mac ###
 
 1. install xcode
-   `https://developer.apple.com/xcode/`
+
+        https://developer.apple.com/xcode/
 
 2. install homebrew
-   `http://mxcl.github.io/homebrew/`
 
-3. Use homebrew to install node, git, ruby, and php
-   `brew install node`
-   `brew install git`
-   `brew install ruby`
-   `brew tap josegonzalez/php`
-   `brew install php54`
+        http://mxcl.github.io/homebrew/
+
+3. Use homebrew to install `node`, `git`, `ruby`, and `php`
+
+        brew install node
+        brew install git
+        brew install ruby
+        brew tap josegonzalez/php
+        brew install php54
 
 4. Update paths as needed in your `~/.bash_profile`:
-   `# brew installed binaries`
-   `export PATH=$PATH:/usr/local/bin`
-   `# npm installed binaries`
-   `export PATH=$PATH:/usr/local/share/npm/bin`
-   `# gem installed binaries`
-   `export PATH=$PATH:/usr/local/opt/ruby/bin`
+   (If you use a tool other than brew to install these dependencies, you may
+   need to modify these paths to point to the install directories.)
 
-5. Close and re-open your terminal so that your new PATH is loaded.
-   Make sure to navigate back to your `hazdev-accordion` project directory.
+        # brew installed binaries
+        export PATH=$PATH:/usr/local/bin
+        # npm installed binaries
+        export PATH=$PATH:/usr/local/share/npm/bin
+        # gem installed binaries
+        export PATH=$PATH:/usr/local/opt/ruby/bin
+
+6. Close and re-open your terminal so that your new PATH is loaded.
+   Make sure to navigate back to your `earthquake-eventadmin` project directory.
+
+Then continue by
+[installing secondary dependencies](readme_dependency_install.md#secondary-dependencies).
+
+---
+### Windows ###
+
+1. You will need a terminal tool for Windows.
+   [Git Bash (http://git-scm.com/download/win)](http://git-scm.com/download/win)
+   was used to test these steps, but
+   [Cygwin (http://cygwin.com/install.html)](http://cygwin.com/install.html)
+   or another unix-like editor should work too.
+
+   - Choosing PATH environment: We recommend the __last option__ here to include
+     Unix tools, but if you don't understand what that entails then use the
+     _second option_ which still adds Git to your system PATH.
+   - Besides that, all of the defaults should be sufficient.
+
+2. Install the latest release of
+   [Node (http://nodejs.org/download/)](http://nodejs.org/download/) for
+   Windows, using the Windows Installer (.msi).
+
+   - All of the defaults should be sufficient for this.
+
+3. Install the latest release of
+   [Ruby (http://rubyinstaller.org/)](http://rubyinstaller.org/) for Windows,
+   using the executable.
+
+   - All of the defaults should be sufficient for this.
+
+4. Install PHP, from zip.
+  1. Download the appropriate zip file from http://windows.php.net/download/
+  2. Unzip the folder and copy the contents into a new folder on your `C:\`
+     drive.
+      `C:\php54`
+  3. Add PHP to your **PATH** (add `C:\php54;` to your "PATH" environment
+     variable).
+
+5. If you are having trouble with PHP, you can try to install it with node.
+
+        npm install -g php
+
+6. Close and re-open your terminal so that your new PATH is loaded.
+   Make sure to navigate back to your `earthquake-eventadmin` project directory.
+
+        git config --global url."https://".insteadOf git://
+
+Then continue by
+[installing secondary dependencies](readme_dependency_install.md#secondary-dependencies).

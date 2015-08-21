@@ -1,5 +1,14 @@
+Readme install dependencies
+
+### [Clone the Project](readme_git_install.md) ###
+Use git to clone the hazdev-accordion project from GitHub repository
+(if you haven't already).
+
 ### Dependencies ###
-You will need to have the following tools installed in order to run this project:
+You will need to have the following tools installed in order to run this
+project. Check out the [Mac](readme_dependency_install_specifics.md#mac) and
+[Windows](readme_dependency_install_specifics.md#windows) details here, or in
+the link below for more specific dependency information.
 
 1. Node
   1. Grunt
@@ -7,18 +16,25 @@ You will need to have the following tools installed in order to run this project
   1. Sass
   1. Compass
 
+[Dependency install details for Windows and Mac](readme_dependency_install_specifics.md)
+
+---
 ### Secondary Dependencies ###
 Make sure you are in your `hazdev-accordion` project directory.
-Install these packages from your terminal.
 
-1. Install local npm modules
-   ```npm install```
+1. Install Sass and Compass with Ruby
 
-### Having trouble getting started?
+        gem install sass
+        gem install compass
 
-1. If this is your first time using **grunt**, you need to install the grunt
-command line interface globally
+1. Use npm to install grunt
 
-    `npm install -g grunt-cli`
+        npm install -g grunt-cli
 
-[Dependency install details for Windows and Mac](readme_dependency_install_specifics.md)
+2. Install local npm modules
+
+        npm install
+
+---
+Once dependencies are installed, you need to
+[configure the project](README.md#configure).

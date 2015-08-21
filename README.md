@@ -1,26 +1,24 @@
-hazdev-accordion
-==============
+Hazdev Accordion
+================
 
 An accordion toggle web application for collapsing and expanding information.
 
-Getting Started
----------------
+[License](LICENSE.md)
 
-[Use git to clone hazdev-question-view from git repository](readme_git_install.md)
+## Getting Started ##
 
-[Install needed dependencies and run them](readme_dependency_install.md)
+### [Install](readme_dependency_install.md) ###
+First time install. Walk through dependencies and other considerations.
 
-To test the application locally, run grunt and browse to:
+### Test ###
+To test the application locally, run `grunt` and browse to:
+
   http://localhost:8000/example.html
 
-### License ###
+---
+### Having trouble getting started? ###
 
-Unless otherwise noted, This software is in the public domain because it
-contains materials that originally came from the United States Geological
-Survey, an agency of the United States Department of Interior. For more
-information, see the official USGS copyright policy at
-http://www.usgs.gov/visual-id/credit_usgs.html#copyright
+If this is your first time using **grunt**, you need to install the grunt
+command line interface globally:
 
-Dependent libraries found are distributed under the open source (or open
-source-like) licenses/agreements. Appropriate license aggrements for each
-library can be found with the library content.
+      npm install -g grunt-cli
