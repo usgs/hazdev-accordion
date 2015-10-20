@@ -38,6 +38,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-mocha-phantomjs": "^2.0.0",
     "grunt-postcss": "^0.5.5",
+    "hazdev-template": "git://github.com/usgs/hazdev-template.git",
     "mocha": "^2.1.0",
     "precss": "^0.3.0"
   },
