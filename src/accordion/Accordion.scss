@@ -1,6 +1,7 @@
 $accordion-border-color:rgba(0,0,0,0.1);
 
 @define-mixin icon $icon {
+  font-family: 'Material Icons';
   content: $icon;
 }
 
@@ -10,9 +11,9 @@ $accordion-border-color:rgba(0,0,0,0.1);
   flex-direction: column;
 
   > .accordion-toggle {
-    background-color:rgba(0,0,0,0.05);
-    border:1px solid $accordion-border-color;
-    cursor:pointer;
+    background-color: rgba(0,0,0,0.05);
+    border: 1px solid $accordion-border-color;
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,24 +21,22 @@ $accordion-border-color:rgba(0,0,0,0.1);
 
     &:before {
       text-align: center;
-      //opacity: 0.75;
-      //font-family: monospace;
       flex: none;
       align-self: center;
       padding-right: 16px;
-      @mixin icon '\2212';
+      @mixin icon '\e5ce';
     }
 
     &:hover {
-      text-decoration:underline;
+      text-decoration: underline;
     }
   }
 
   > .accordion-content {
-    padding:0 1em 1em;
-    border-bottom:1px solid $accordion-border-color;
-    border-left:1px solid $accordion-border-color;
-    border-right:1px solid $accordion-border-color;
+    padding: 0 1em 1em;
+    border-bottom: 1px solid $accordion-border-color;
+    border-left: 1px solid $accordion-border-color;
+    border-right: 1px solid $accordion-border-color;
     flex: 1;
   }
 }
@@ -47,36 +46,36 @@ $accordion-border-color:rgba(0,0,0,0.1);
   > .accordion-toggle {
 
     &:before {
-      @mixin icon '\002B';
+      @mixin icon '\e5cf';
     }
   }
 
   > .accordion-content {
-    display:none;
+    display: none;
   }
 }
 
 /* Group -- Remove margin between accordion elements */
 .accordion-group {
-  margin:1em 0;
-  border-top:1px solid $accordion-border-color;
+  margin: 1em 0;
+  border-top: 1px solid $accordion-border-color;
 
   > .accordion {
     > .accordion-toggle {
-      margin:0;
-      border-top:none;
+      margin: 0;
+      border-top: none;
     }
   }
 }
 
 /* Section -- Toggle content */
 .accordion-section {
-  margin:1em 0;
-  border:none;
+  margin: 1em 0;
+  border: none;
 
   > .accordion-content {
-    padding:0;
-    border:none;
+    padding: 0;
+    border: none;
   }
 
   > .accordion-toggle {
@@ -97,8 +96,8 @@ $accordion-border-color:rgba(0,0,0,0.1);
     }
 
     &:hover {
-      text-decoration:underline;
-      background:none;
+      text-decoration: underline;
+      background: none;
     }
   }
 }
