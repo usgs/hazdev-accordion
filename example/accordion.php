@@ -1,4 +1,5 @@
 <?php
+
 if (!isset($TEMPLATE)) {
   $TITLE = 'Accordion Example';
   $HEAD = '<link rel="stylesheet" href="hazdev-accordion.css"/>' .
@@ -7,6 +8,7 @@ if (!isset($TEMPLATE)) {
       '<script src="Accordion.js"></script>';
 }
 include '_example.inc.php';
+
 ?>
 
 <h1>Accordion examples</h1>
