@@ -2,8 +2,7 @@
 
 if (!isset($TEMPLATE)) {
   $TITLE = 'Accordion Example';
-  $HEAD = '<link rel="stylesheet" href="hazdev-accordion.css"/>' .
-      '<link rel="stylesheet" href="accordion.css"/>';
+  $HEAD = '<link rel="stylesheet" href="hazdev-accordion.css"/>';
   $FOOT = '<script src="hazdev-accordion.js"></script>' .
       '<script src="Accordion.js"></script>';
 }
