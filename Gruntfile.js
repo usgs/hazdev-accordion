@@ -17,6 +17,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', [
     'build',
+    'connect:template',
+    'configureProxies:dev',
     'connect:dev',
     'connect:test',
     'mocha_phantomjs',
