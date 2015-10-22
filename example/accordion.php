@@ -10,7 +10,6 @@ include '_example.inc.php';
 
 ?>
 
-<h1>Accordion examples</h1>
 <p>
   This accordion element is not part of the original DOM, but is injected by
   Javascript at load time. Accordion sections expand and collapse when you
