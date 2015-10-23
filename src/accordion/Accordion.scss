@@ -1,32 +1,30 @@
-$accordion-border-color:rgba(0,0,0,0.1);
+$accordion-border-color: #e0e0e0;
+$accordion-background-color: #f4f4f4;
 
 @define-mixin icon $icon {
   font-family: 'Material Icons';
   content: $icon;
 }
 
-/* Base -- Base accordion styles */
-.accordion {
-  display: flex;
-  flex-direction: column;
-}
-
-.accordion-toggle {
-  align-items: center;
-  background-color: rgba(0,0,0,0.05);
+.accordion > .accordion-toggle {
+  background-color: $accordion-background-color;
   border: 1px solid $accordion-border-color;
   cursor: pointer;
-  display: flex;
-  flex-direction: row;
+  display: block;
   margin: 1em 0 0;
-  padding: 12px 16px;
+  overflow: hidden;
+  padding: 0.75em 16px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 
   &:before {
-    align-self: center;
-    flex: none;
+    display: inline-block;
     padding-right: 16px;
     text-align: center;
     @mixin icon '\e5ce';
+    vertical-align: sub;
+    font-size: 1.2em;
+    line-height: 1;
   }
 
   &:hover {
@@ -38,8 +36,11 @@ $accordion-border-color:rgba(0,0,0,0.1);
   border-bottom: 1px solid $accordion-border-color;
   border-left: 1px solid $accordion-border-color;
   border-right: 1px solid $accordion-border-color;
-  flex: 1;
-  padding: 0 1em 1em;
+  padding: 1px 1em 1em;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .accordion-closed {
@@ -86,15 +87,14 @@ $accordion-border-color:rgba(0,0,0,0.1);
 
     &:before {
       display: inline-block;
-      font-size: 16px;
+      font-size: 1.2em;
       padding: 0;
       position: static;
       text-align: left;
-      width: 1em;
+      width: 1.5em;
     }
 
     &:hover {
-      background: none;
       text-decoration: underline;
     }
   }
