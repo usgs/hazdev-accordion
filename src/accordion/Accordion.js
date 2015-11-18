@@ -45,21 +45,15 @@ var _extend = function (dst) {
   return dst;
 };
 
-var _onClick = function (evt) {
-  var target = evt.target;
-
-  if (target.classList.contains(_ACCORDION_TOGGLE)) {
-    target.parentElement.classList.toggle(_ACCORDION_CLOSED);
-  }
-};
-
 
 var Accordion = function (options) {
   var _this,
       _initialize,
 
       _el,
-      _options;
+      _options,
+
+      _onClick;
 
 
   _this = {
@@ -80,6 +74,19 @@ var Accordion = function (options) {
       for (i = 0; i < len; i++) {
         _this.addAccordion(options.accordions[i]);
       }
+    }
+  };
+
+  _onClick = function (evt) {
+    var target = evt.target;
+
+    while (target && target !== _el) {
+      if (target.classList.contains(_ACCORDION_TOGGLE)) {
+        target.parentElement.classList.toggle(_ACCORDION_CLOSED);
+        break;
+      }
+
+      target = target.parentNode;
     }
   };
 
@@ -128,6 +135,9 @@ var Accordion = function (options) {
     _el = null;
     _options = null;
 
+    _onClick = null;
+
+    _initialize = null;
     _this = null;
   };
 
