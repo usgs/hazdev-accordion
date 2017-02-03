@@ -20,7 +20,6 @@ $accordion-background-color: #f4f4f4;
     line-height: 1;
     padding: 0 1em;
     vertical-align: sub;
-    transition: transform 0.5s ease;
   }
 
   &:hover {
@@ -32,17 +31,16 @@ $accordion-background-color: #f4f4f4;
   border-bottom: 1px solid $accordion-border-color;
   border-left: 1px solid $accordion-border-color;
   border-right: 1px solid $accordion-border-color;
-  padding: 0 1em;
-  max-height: 30em;
-  overflow: scroll;
-  transition: max-height 0.5s cubic-bezier(1, 0, 0, 1);
+  max-height: none;
+  padding: 1px 1em 0 1em;
 
   > :last-child {
     margin-bottom: 1em;
   }
 }
 
-.accordion-closed {
+
+.accordion.accordion-closed {
 
   > .accordion-toggle:before {
     transform: rotate(180deg);
@@ -52,6 +50,7 @@ $accordion-background-color: #f4f4f4;
     border-bottom: 0;
     max-height: 0;
     overflow: hidden;
+    padding: 0 1em;
   }
 }
 
@@ -99,4 +98,15 @@ $accordion-background-color: #f4f4f4;
       text-decoration: underline;
     }
   }
+}
+
+/** Animate expand/collapse **/
+.animate > .accordion-toggle:before {
+  transition: transform 0.5s ease;
+}
+
+.animate > .accordion-content {
+  max-height: 30em;
+  overflow: scroll;
+  transition: max-height 0.5s cubic-bezier(1, 0, 0, 1);
 }

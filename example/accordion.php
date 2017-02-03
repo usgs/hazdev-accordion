@@ -43,7 +43,7 @@ include '_example.inc.php';
     </div>
   </div>
 
-  <div class="accordion accordion-standard accordion-closed">
+  <div class="accordion accordion-standard accordion-closed animate">
     <h3 class="accordion-toggle">Section Header (Default Closed)</h3>
     <div class="accordion-content">
       <p>
