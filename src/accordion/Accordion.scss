@@ -8,7 +8,7 @@ $accordion-background-color: #f4f4f4;
   display: block;
   margin: 1em 0 0;
   overflow: hidden;
-  padding: 0.75em 16px;
+  padding: 0.75em 1em 0.7em 0;
   text-overflow: ellipsis;
   white-space: nowrap;
 
@@ -18,8 +18,7 @@ $accordion-background-color: #f4f4f4;
     font-family: 'Material Icons';
     font-size: 1.2em;
     line-height: 1;
-    padding-right: 16px;
-    text-align: center;
+    padding: 0 1em;
     vertical-align: sub;
   }
 
@@ -32,22 +31,26 @@ $accordion-background-color: #f4f4f4;
   border-bottom: 1px solid $accordion-border-color;
   border-left: 1px solid $accordion-border-color;
   border-right: 1px solid $accordion-border-color;
-  padding: 1px 1em 1em;
+  max-height: none;
+  padding: 1px 1em 0 1em;
 
   > :last-child {
-    margin-bottom: 0;
+    margin-bottom: 1em;
   }
 }
 
-.accordion-closed {
+
+.accordion.accordion-closed {
 
   > .accordion-toggle:before {
-    content: '\e5cf';
-    font-family: 'Material Icons';
+    transform: rotate(180deg);
   }
 
   > .accordion-content {
-    display: none;
+    border-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1em;
   }
 }
 
@@ -87,12 +90,23 @@ $accordion-background-color: #f4f4f4;
       font-size: 1.2em;
       padding: 0;
       position: static;
-      text-align: left;
-      width: 1.5em;
+      text-align: center;
+      width: 2em;
     }
 
     &:hover {
       text-decoration: underline;
     }
   }
+}
+
+/** Animate expand/collapse **/
+.animate > .accordion-toggle:before {
+  transition: transform 0.5s ease;
+}
+
+.animate > .accordion-content {
+  max-height: 30em;
+  overflow: scroll;
+  transition: max-height 0.5s cubic-bezier(1, 0, 0, 1);
 }
